@@ -8,35 +8,35 @@ window.addEventListener("load", function() {
 // document.querySelector("#play").addEventListener("click", function() {
 // 	console.log("Play Video");
 // });
-var play = document.querySelector("#play");
-var pause = document.querySelector("#pause");
-var video = document.querySelector("#video");
-var slow = document.querySelector("#slower");
-var fast = document.querySelector("#faster");
-var skip = document.querySelector("#skip")
+var play = document.querySelector("play")
+var pause = document.querySelector("pause")
+var video = document.querySelector("video")
+var slow = document.querySelector("slower")
+var fast = document.querySelector("faster")
+var skip = document.querySelector("skip")
 
-document.addEventListener('click',function(){
+document.querySelector("#play").addEventListener('click',function(){
 	video.play()
 	document.querySelector('#volume').innerHTML = video.volume * 100 + '%'
 	console.log("Play Video")
 })
 
-pause.addEventListener('click',function(){
-	video.pause();
+document.querySelector("#pause").addEventListener('click',function(){
+	video.pause()
 	console.log("Pause Video")
 })
 
-slow.addEventListener('click',function(){
+document.querySelector("#slower").addEventListener('click',function(){
 	video.playbackRate -= 0.05;
 	console.log("New Speed is", video.playbackRate)
 })
 
-fast.addEventListener('click', function(){
+document.querySelector("#faster").addEventListener('click', function(){
 	video.playbackRate += 0.05;
 	console.log("New Speed is",video.playbackRate)
 })
 
-skip.addEventListener('click',function(){
+document.querySelector("#skip").addEventListener('click',function(){
 	video.currentTime += 15;
 	if (video.currentTime > video.duration - 0.01){
 		video.currentTime = 0;
