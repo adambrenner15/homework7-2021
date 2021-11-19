@@ -16,7 +16,6 @@ var fast = document.querySelector("#faster");
 var skip = document.querySelector("#skip")
 
 document.addEventListener('click',function(){
-	var play
 	video.play()
 	document.querySelector('#volume').innerHTML = video.volume * 100 + '%'
 	console.log("Play Video")
